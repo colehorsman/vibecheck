@@ -310,18 +310,25 @@ TypeScript platform that generates professional career showcases from multiple d
 
 ### Low-Hanging Fruit Security
 
-These 7 things prevent 80% of vibe coding disasters:
+These 7 things prevent most vibe coding disasters:
 
 1. **Never commit secrets.** Use `.env` files. Add to `.gitignore`.
 2. **Review auth code.** AI often skips authentication.
 3. **Check .gitignore.** AI doesn't always know what to exclude.
 4. **Scope API permissions.** Only what's needed.
-5. **Use secrets scanner.** git-secrets, gitleaks, or GitHub's built-in.
+5. **Use secrets scanner.** gitleaks, git-secrets, or GitHub's built-in.
 6. **Review DB queries.** SQL injection is alive and well.
 7. **Test error handling.** AI exposes stack traces.
 
+### Advanced Security Tools
+
+- **AWS Security Agent** (Preview) — AI-powered security reviews, pen testing, threat modeling
+- **OWASP Top 10 Scanning** — Semgrep, Bandit, Snyk for vulnerability detection
+- **MITRE ATT&CK Mapping** — Map findings to threat framework for prioritization
+
 → [Full Security Checklist](docs/security/checklist.md)
 → [Deployment Security Stages](docs/security/deployment-stages.md)
+→ [Security Scanner Prompts](prompts/security-checklist/05-use-secrets-scanner.md)
 
 </details>
 

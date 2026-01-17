@@ -258,8 +258,183 @@ gitleaks:
 | **truffleHog** | Entropy detection, verified secrets | Slower, more false positives |
 | **detect-secrets** | Baseline comparison, plugins | Setup complexity |
 | **GitHub native** | Zero config, push protection | Limited to known patterns |
+| **AWS Security Agent** | Full app context, pen testing, OWASP/MITRE | AWS-focused, preview |
 
 **Recommendation:** Use gitleaks for pre-commit + CI, enable GitHub native scanning, run truffleHog periodically for deep scans.
+
+---
+
+## AWS Security Agent (Preview)
+
+AWS Security Agent is a frontier AI agent that proactively secures your applications throughout the development lifecycle. It understands your entire application architecture, code, and security requirements.
+
+### What It Does
+- **Design Review:** Assesses architecture against security best practices before code is written
+- **Code Scanning:** Continuous vulnerability scanning with full application context
+- **Penetration Testing:** On-demand pen testing without scheduling
+- **Threat Modeling:** Generates threat models based on your specific application
+
+### Setup
+```bash
+# AWS Security Agent is in preview - request access at:
+# https://aws.amazon.com/security-agent
+
+# Once enabled, it integrates with your AWS environment automatically
+```
+
+### Use Cases
+```
+Ask AWS Security Agent to:
+1. Review my application architecture for security flaws
+2. Scan my repository for OWASP Top 10 vulnerabilities
+3. Generate a threat model for my application
+4. Run penetration tests against my staging environment
+5. Map findings to MITRE ATT&CK framework
+```
+
+---
+
+## OWASP Top 10 Scanning
+
+The OWASP Top 10 represents the most critical web application security risks. Use these prompts to scan for them.
+
+### Scan for OWASP Top 10
+
+```
+Scan my codebase for OWASP Top 10 vulnerabilities:
+
+Project type: [Node.js / Python / etc.]
+Framework: [Express / FastAPI / Next.js / etc.]
+
+Check for:
+1. A01:2021 - Broken Access Control
+   - Missing authorization checks
+   - IDOR vulnerabilities
+   - Path traversal
+
+2. A02:2021 - Cryptographic Failures
+   - Weak encryption
+   - Hardcoded secrets
+   - Insecure data transmission
+
+3. A03:2021 - Injection
+   - SQL injection
+   - NoSQL injection
+   - Command injection
+   - XSS
+
+4. A04:2021 - Insecure Design
+   - Missing rate limiting
+   - No input validation
+   - Trust boundary violations
+
+5. A05:2021 - Security Misconfiguration
+   - Debug mode in production
+   - Default credentials
+   - Unnecessary features enabled
+
+6. A06:2021 - Vulnerable Components
+   - Outdated dependencies
+   - Known CVEs
+   - Unmaintained packages
+
+7. A07:2021 - Authentication Failures
+   - Weak passwords allowed
+   - Missing MFA
+   - Session fixation
+
+8. A08:2021 - Software and Data Integrity
+   - Missing integrity checks
+   - Insecure deserialization
+   - CI/CD vulnerabilities
+
+9. A09:2021 - Security Logging Failures
+   - Missing audit logs
+   - Sensitive data in logs
+   - No alerting
+
+10. A10:2021 - SSRF
+    - Unvalidated URLs
+    - Internal service access
+
+For each finding, show:
+- File and line number
+- Severity (Critical/High/Medium/Low)
+- How to fix it
+- Example secure code
+```
+
+### OWASP Quick Scan Commands
+
+```bash
+# Semgrep - OWASP rules
+semgrep --config "p/owasp-top-ten" .
+
+# Bandit (Python)
+bandit -r . -f json -o bandit-report.json
+
+# npm audit (Node.js)
+npm audit --json > npm-audit.json
+
+# Snyk
+snyk test --json > snyk-report.json
+
+# OWASP Dependency Check
+dependency-check --scan . --format JSON --out dependency-check-report.json
+```
+
+---
+
+## MITRE ATT&CK Mapping
+
+Map your security findings to the MITRE ATT&CK framework for better threat understanding.
+
+### Generate Threat Model
+
+```
+Generate a threat model for my application using MITRE ATT&CK:
+
+Application type: [Web app / API / Mobile / etc.]
+Architecture: [Describe your architecture]
+Data sensitivity: [Public / Internal / Confidential / Restricted]
+
+Map potential attacks to:
+1. Initial Access techniques
+2. Execution techniques
+3. Persistence techniques
+4. Privilege Escalation techniques
+5. Defense Evasion techniques
+6. Credential Access techniques
+7. Discovery techniques
+8. Lateral Movement techniques
+9. Collection techniques
+10. Exfiltration techniques
+
+For each relevant technique:
+- Show the ATT&CK ID (e.g., T1190)
+- Explain how it applies to my app
+- Recommend mitigations
+- Suggest detection methods
+```
+
+### Map Vulnerabilities to MITRE
+
+```
+I found these vulnerabilities in my scan:
+[PASTE YOUR SCAN RESULTS]
+
+Map each vulnerability to:
+1. MITRE ATT&CK technique ID
+2. Tactic category
+3. Real-world attack scenarios
+4. Detection opportunities
+5. Recommended mitigations
+
+Create a prioritized remediation plan based on:
+- Likelihood of exploitation
+- Impact if exploited
+- Ease of remediation
+```
 
 ---
 
