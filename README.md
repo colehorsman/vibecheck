@@ -1,6 +1,8 @@
 # VibeCheck
 
-**Build secure projects with AI**
+## Sip. Secure. Ship.
+
+**Build a secure project in one hour.**
 
 > From prototype to production — all skill levels.
 
@@ -11,20 +13,20 @@
 
 ## TL;DR
 
-- **45% of AI-generated code contains vulnerabilities.** ([Stanford CCS '23](https://arxiv.org/abs/2211.03622)) This repo helps you avoid them.
+- **45% of AI-generated code contains vulnerabilities.** ([Veracode 2025 Report](https://www.veracode.com/blog/genai-code-security-report/)) This repo helps you avoid them.
 - **$0 stack available.** Build production apps without spending a dime.
 - **Vibe coding → Spec engineering.** From prototype to production.
 - **All skill levels.** Beginner → Intermediate → Advanced paths.
-- **Security-first.** Checklists that prevent 80% of disasters.
+- **Security-first.** Checklists that prevent disasters.
 
 ---
 
 ## What You'll Leave With
 
 ✅ Skills to vibe code a project from scratch  
-✅ The security checklist that prevents 80% of disasters  
+✅ The security checklist that prevents disasters  
 ✅ This GitHub repo of resources  
-✅ Your own project (if you bring one)
+✅ Ideas for your next project
 
 ---
 
