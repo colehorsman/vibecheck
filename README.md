@@ -208,8 +208,11 @@ TypeScript platform that generates professional career showcases from multiple d
 **Recommended Tools:**
 - [Lovable](https://lovable.dev) — Describe your app, it builds it
 - [v0](https://v0.dev) — Say "build me a dashboard"
+- [Manus](https://manus.im) — AI agent that builds apps
+- [Base44](https://base44.com) — No-code app builder
 - [Bolt.new](https://bolt.new) — Web apps in browser
 - [Replit](https://replit.com) — Browser IDE with AI
+- [Repframe](https://repframe.ai) — AI-powered app builder
 
 **First Project Ideas:**
 - Personal portfolio site (20 min)
@@ -238,9 +241,15 @@ TypeScript platform that generates professional career showcases from multiple d
 **The Approach:** Write specs first. AI executes with constraints. Better code, better docs.
 
 **Recommended Tools:**
-- [Kiro](https://kiro.dev) — Spec-driven development (AWS)
+- [GitHub](https://github.com) — Store your code
 - [Cursor](https://cursor.com) — VS Code fork, AI-native
-- [GitHub Copilot](https://github.com/features/copilot) — Inline suggestions
+- [Kiro](https://kiro.dev) — Spec-driven development (AWS)
+- [Windsurf](https://codeium.com/windsurf) — AI IDE/Coding
+- [Supabase](https://supabase.com) — Backend (DB + Auth)
+- [Firebase](https://firebase.google.com) — Backend (DB + Auth)
+- [n8n](https://n8n.io) / [Zapier](https://zapier.com) — Workflows & automation
+- [Vercel](https://vercel.com) — Deploy apps
+- [Railway](https://railway.app) — Deploy apps
 
 **Key Concepts:**
 - [Spec-Driven Development](docs/advanced/spec-driven.md) — EARS format, requirements first
@@ -254,7 +263,7 @@ TypeScript platform that generates professional career showcases from multiple d
 
 **Requirements:**
 - [ ] Basic coding knowledge
-- [ ] VS Code or Kiro
+- [ ] VS Code, Cursor, or Kiro
 - [ ] GitHub account
 
 → [Intermediate Guide](docs/intermediate/README.md)
@@ -270,8 +279,12 @@ TypeScript platform that generates professional career showcases from multiple d
 
 **Recommended Tools:**
 - [Claude Code](https://claude.ai/code) — Agentic coding with subagents
+- [Cursor](https://cursor.com) — AI IDE/Coding
+- [OpenAI Codex](https://openai.com/codex) — AI coding
 - [Cline](https://github.com/cline/cline) — Open-source autonomous agent
-- [Strands Agent SDK](https://github.com/strands-agents/strands-agents) — Build custom agents
+- [Vercel](https://vercel.com) — Deploy apps
+- [Railway](https://railway.app) — Deploy apps
+- [Netlify](https://netlify.com) — Deploy apps
 
 **Key Concepts:**
 - [Agentic Workflows](docs/advanced/agentic-workflows.md) — Multi-agent setups
@@ -341,17 +354,45 @@ Use only 10-15% of the model's context window per request.
 
 ## 🛠️ Tools Quick Reference
 
-| Level | Tool | Cost | Best For |
-|-------|------|------|----------|
-| Beginner | [Lovable](https://lovable.dev) | Free tier | Describe → Build |
-| Beginner | [v0](https://v0.dev) | Free tier | UI components |
-| Beginner | [Bolt.new](https://bolt.new) | Free tier | Quick prototypes |
-| Intermediate | [Kiro](https://kiro.dev) | Free preview | Spec-driven |
-| Intermediate | [Cursor](https://cursor.com) | $20/mo | Best overall IDE |
-| Intermediate | [GitHub Copilot](https://github.com/features/copilot) | $10/mo | Inline suggestions |
-| Advanced | [Claude Code](https://claude.ai/code) | Usage-based | Agentic coding |
-| Advanced | [Cline](https://github.com/cline/cline) | Free | Open-source agent |
-| Advanced | [Strands SDK](https://github.com/strands-agents/strands-agents) | Free | Custom agents |
+*There's no wrong answer — pick what fits your style.*
+
+### 🌱 Beginner (Vibe Coding)
+
+| Tool | What It Does | Cost |
+|------|--------------|------|
+| [Lovable](https://lovable.dev) | Describe your app, it builds it | Free tier |
+| [v0](https://v0.dev) | UI components from prompts | Free tier |
+| [Manus](https://manus.im) | AI agent that builds apps | Free tier |
+| [Base44](https://base44.com) | No-code app builder | Free tier |
+| [Bolt.new](https://bolt.new) | Web apps in browser | Free tier |
+| [Replit](https://replit.com) | Browser IDE + prototypes | Free tier |
+| [Repframe](https://repframe.ai) | AI-powered app builder | Free tier |
+
+### 🔧 Intermediate (Spec Engineering)
+
+| Tool | What It Does | Cost |
+|------|--------------|------|
+| [GitHub](https://github.com) | Store your code | Free |
+| [Cursor](https://cursor.com) | AI IDE/Coding | $20/mo |
+| [Kiro](https://kiro.dev) | Spec-driven development | Free preview |
+| [Windsurf](https://codeium.com/windsurf) | AI IDE/Coding | Free tier |
+| [Supabase](https://supabase.com) | Backend (DB + Auth) | Free tier |
+| [Firebase](https://firebase.google.com) | Backend (DB + Auth) | Free tier |
+| [n8n](https://n8n.io) / [Zapier](https://zapier.com) | Workflows & automation | Free tier |
+| [Vercel](https://vercel.com) | Deploy apps | Free tier |
+| [Railway](https://railway.app) | Deploy apps | Free tier |
+
+### 🚀 Advanced (Agentic Coding)
+
+| Tool | What It Does | Cost |
+|------|--------------|------|
+| [Claude Code](https://claude.ai/code) | Agentic coding | Usage-based |
+| [Cursor](https://cursor.com) | AI IDE/Coding | $20/mo |
+| [OpenAI Codex](https://openai.com/codex) | AI coding | Usage-based |
+| [Cline](https://github.com/cline/cline) | Open-source agent | Free |
+| [Vercel](https://vercel.com) | Deploy apps | Free tier |
+| [Railway](https://railway.app) | Deploy apps | Free tier |
+| [Netlify](https://netlify.com) | Deploy apps | Free tier |
 
 → [Full Tool Comparison](docs/tools-comparison.md)
 
