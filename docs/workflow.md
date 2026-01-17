@@ -342,14 +342,4 @@ flowchart TD
 
 ---
 
-## The VibeCheck Mantra
-
-```
-Sip.     → Take your time, describe what you want
-Secure.  → Run the checklist before you ship
-Ship.    → Get it live, iterate from there
-```
-
----
-
 *"80% of AI-generated code contains vulnerabilities. This workflow helps you avoid them."*

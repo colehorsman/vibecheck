@@ -2,6 +2,24 @@
 
 Copy-paste prompts that actually work.
 
+## 🔒 Security Checklist Prompts
+
+**The 7-point checklist that prevents 80% of vibe coding disasters.**
+
+| # | Item | What It Does |
+|---|------|--------------|
+| 1 | [Never commit secrets](security-checklist/01-never-commit-secrets.md) | Setup .env, gitleaks, pre-commit hooks |
+| 2 | [Review auth code](security-checklist/02-review-auth-code.md) | Audit AI-generated authentication |
+| 3 | [Check .gitignore](security-checklist/03-check-gitignore.md) | Ensure nothing sensitive is tracked |
+| 4 | [Scope API permissions](security-checklist/04-scope-api-permissions.md) | Least privilege for all APIs |
+| 5 | [Use secrets scanner](security-checklist/05-use-secrets-scanner.md) | Automate secret detection |
+| 6 | [Review DB queries](security-checklist/06-review-db-queries.md) | Prevent SQL/NoSQL injection |
+| 7 | [Test error handling](security-checklist/07-test-error-handling.md) | Don't leak info in errors |
+
+→ [Full Security Checklist Guide](security-checklist/README.md)
+
+---
+
 ## Quick Reference
 
 | Prompt | Use For |

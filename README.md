@@ -1,8 +1,8 @@
 # VibeCheck
 
-**Sip. Secure. Ship.**
+**Build secure projects with AI**
 
-> Build secure projects with AI in one hour.
+> From prototype to production — all skill levels.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -11,7 +11,7 @@
 
 ## TL;DR
 
-- **80% of AI-generated code contains vulnerabilities.** This repo helps you avoid them.
+- **45% of AI-generated code contains vulnerabilities.** ([Stanford CCS '23](https://arxiv.org/abs/2211.03622)) This repo helps you avoid them.
 - **$0 stack available.** Build production apps without spending a dime.
 - **Vibe coding → Spec engineering.** From prototype to production.
 - **All skill levels.** Beginner → Intermediate → Advanced paths.
@@ -208,11 +208,10 @@ TypeScript platform that generates professional career showcases from multiple d
 **Recommended Tools:**
 - [Lovable](https://lovable.dev) — Describe your app, it builds it
 - [v0](https://v0.dev) — Say "build me a dashboard"
-- [Manus](https://manus.im) — AI agent that builds apps
-- [Base44](https://base44.com) — No-code app builder
+- [ChatGPT](https://chat.openai.com) — Plan projects, write specs
+- [Claude](https://claude.ai) — Plan projects, write specs
 - [Bolt.new](https://bolt.new) — Web apps in browser
 - [Replit](https://replit.com) — Browser IDE with AI
-- [Repframe](https://repframe.ai) — AI-powered app builder
 
 **First Project Ideas:**
 - Personal portfolio site (20 min)
@@ -244,12 +243,11 @@ TypeScript platform that generates professional career showcases from multiple d
 - [GitHub](https://github.com) — Store your code
 - [Cursor](https://cursor.com) — VS Code fork, AI-native
 - [Kiro](https://kiro.dev) — Spec-driven development (AWS)
-- [Windsurf](https://codeium.com/windsurf) — AI IDE/Coding
+- [Replit](https://replit.com) — Browser IDE with AI agent
 - [Supabase](https://supabase.com) — Backend (DB + Auth)
-- [Firebase](https://firebase.google.com) — Backend (DB + Auth)
 - [n8n](https://n8n.io) / [Zapier](https://zapier.com) — Workflows & automation
+- [Chrome DevTools MCP](https://github.com/anthropics/anthropic-quickstarts) — UI feedback & QA testing (game changer!)
 - [Vercel](https://vercel.com) — Deploy apps
-- [Railway](https://railway.app) — Deploy apps
 
 **Key Concepts:**
 - [Spec-Driven Development](docs/advanced/spec-driven.md) — EARS format, requirements first
@@ -280,8 +278,8 @@ TypeScript platform that generates professional career showcases from multiple d
 **Recommended Tools:**
 - [Claude Code](https://claude.ai/code) — Agentic coding with subagents
 - [Cursor](https://cursor.com) — AI IDE/Coding
-- [OpenAI Codex](https://openai.com/codex) — AI coding
 - [Cline](https://github.com/cline/cline) — Open-source autonomous agent
+- [OpenRouter](https://openrouter.ai) — Multi-model API gateway
 - [Vercel](https://vercel.com) — Deploy apps
 - [Railway](https://railway.app) — Deploy apps
 - [Netlify](https://netlify.com) — Deploy apps
@@ -326,6 +324,49 @@ These 7 things prevent 80% of vibe coding disasters:
 </details>
 
 <details>
+<summary><strong>🚀 Deployment Decisions</strong> — Where should this run?</summary>
+
+### Before You Deploy, Ask 4 Questions
+
+**1. Where does this actually need to run?**
+- Just your laptop? → Docker Desktop. Done.
+- Internal work tool? → Get AWS sandbox access. Run mock data first.
+- Public-facing? → Vercel free tier handles 90% of MVPs.
+
+**2. What data are you touching?**
+- Work data? → Mock it or obfuscate it before any cloud deployment.
+- Personal project? → You're probably fine locally.
+- PII? → Stop. Think. Then proceed carefully.
+
+**3. What's your monthly budget?**
+- $0? → The free stack works. Vercel + Supabase + Stack Auth.
+- $20? → Add a custom domain (~$12/year) and you're set.
+- More? → Match cost to actual usage, not anticipated usage.
+
+**4. Do you need it public?**
+- Personal portfolio? → Yes, you need a domain.
+- Internal tool? → Maybe not. localhost:3000 is free.
+- MVP for feedback? → Vercel preview URLs work great.
+
+### Deployment Decision Tree
+
+| Need a database? | Budget | Recommendation |
+|------------------|--------|----------------|
+| No (static site) | $0 | Netlify or Vercel |
+| No (dynamic) | $0 | Vercel or Railway |
+| Yes (Postgres) | $0 | Supabase + Vercel |
+| Yes (custom) | $0 | Railway or Render |
+| Yes (custom) | $$ + AWS | Terraform + AWS |
+| Yes (custom) | $$ + Easy | Vercel + Supabase |
+
+**Rule of thumb:** Start local, deploy free, pay when you have users.
+
+→ [Full Workflow](docs/workflow.md)
+→ [$0 Stack Guide](docs/free-stack.md)
+
+</details>
+
+<details>
 <summary><strong>💰 Token Optimization</strong> — Save money, get better results</summary>
 
 ### The 10-15% Rule
@@ -350,6 +391,35 @@ Use only 10-15% of the model's context window per request.
 
 </details>
 
+<details>
+<summary><strong>🔄 The VibeCheck Workflow</strong> — From idea to secure deployment</summary>
+
+### The 6 Stages
+
+| Stage | Goal | Key Action |
+|-------|------|------------|
+| 1️⃣ **Ideate** | Get idea into a tool | Describe what you want |
+| 2️⃣ **Build POC** | Working prototype | Iterate until MVP |
+| 3️⃣ **Spec It Out** | Document intent | Requirements + design |
+| 4️⃣ **Secure** | Catch issues early | Run the 7-point checklist |
+| 5️⃣ **Source Control** | Git before GitHub | Local commits first |
+| 6️⃣ **Deploy** | Ship it | Easy button or IaC |
+
+### Tools by Stage
+
+| Stage | Beginner | Intermediate | Advanced |
+|-------|----------|--------------|----------|
+| **Ideate** | Lovable, v0 | Kiro, Cursor | Claude Code |
+| **Build** | Bolt, Replit | Cursor, Windsurf | Claude Code, Cline |
+| **Spec** | — | Kiro Specs | CLAUDE.md |
+| **Secure** | gitleaks | gitleaks + Checkov | Custom agents |
+| **Source** | GitHub Desktop | git CLI | git + hooks |
+| **Deploy** | Vercel, Netlify | Railway, Render | Terraform + AWS |
+
+→ [Full Workflow Guide](docs/workflow.md)
+
+</details>
+
 ---
 
 ## 🛠️ Tools Quick Reference
@@ -362,11 +432,10 @@ Use only 10-15% of the model's context window per request.
 |------|--------------|------|
 | [Lovable](https://lovable.dev) | Describe your app, it builds it | Free tier |
 | [v0](https://v0.dev) | UI components from prompts | Free tier |
-| [Manus](https://manus.im) | AI agent that builds apps | Free tier |
-| [Base44](https://base44.com) | No-code app builder | Free tier |
+| [ChatGPT](https://chat.openai.com) | Plan projects, write specs | Free tier |
+| [Claude](https://claude.ai) | Plan projects, write specs | Free tier |
 | [Bolt.new](https://bolt.new) | Web apps in browser | Free tier |
 | [Replit](https://replit.com) | Browser IDE + prototypes | Free tier |
-| [Repframe](https://repframe.ai) | AI-powered app builder | Free tier |
 
 ### 🔧 Intermediate (Spec Engineering)
 
@@ -375,12 +444,11 @@ Use only 10-15% of the model's context window per request.
 | [GitHub](https://github.com) | Store your code | Free |
 | [Cursor](https://cursor.com) | AI IDE/Coding | $20/mo |
 | [Kiro](https://kiro.dev) | Spec-driven development | Free preview |
-| [Windsurf](https://codeium.com/windsurf) | AI IDE/Coding | Free tier |
+| [Replit](https://replit.com) | Browser IDE with AI agent | Free tier |
 | [Supabase](https://supabase.com) | Backend (DB + Auth) | Free tier |
-| [Firebase](https://firebase.google.com) | Backend (DB + Auth) | Free tier |
 | [n8n](https://n8n.io) / [Zapier](https://zapier.com) | Workflows & automation | Free tier |
+| [Chrome DevTools MCP](https://github.com/anthropics/anthropic-quickstarts) | UI feedback & QA | Free |
 | [Vercel](https://vercel.com) | Deploy apps | Free tier |
-| [Railway](https://railway.app) | Deploy apps | Free tier |
 
 ### 🚀 Advanced (Agentic Coding)
 
@@ -388,8 +456,8 @@ Use only 10-15% of the model's context window per request.
 |------|--------------|------|
 | [Claude Code](https://claude.ai/code) | Agentic coding | Usage-based |
 | [Cursor](https://cursor.com) | AI IDE/Coding | $20/mo |
-| [OpenAI Codex](https://openai.com/codex) | AI coding | Usage-based |
 | [Cline](https://github.com/cline/cline) | Open-source agent | Free |
+| [OpenRouter](https://openrouter.ai) | Multi-model API gateway | Usage-based |
 | [Vercel](https://vercel.com) | Deploy apps | Free tier |
 | [Railway](https://railway.app) | Deploy apps | Free tier |
 | [Netlify](https://netlify.com) | Deploy apps | Free tier |
@@ -496,4 +564,4 @@ MIT — Use it, share it, build with it.
 
 ---
 
-*Sip. Secure. Ship.*
+*Build secure projects with AI.*
