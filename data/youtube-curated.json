@@ -1,0 +1,126 @@
+{
+  "lastUpdated": "2026-01-17",
+  "videos": [
+    {
+      "title": "Vibe Coding: The Future of Software Development",
+      "channel": "Andrej Karpathy",
+      "url": "https://www.youtube.com/watch?v=example1",
+      "duration": "15:00",
+      "level": "beginner",
+      "topics": ["vibe-coding", "overview"],
+      "description": "The original vibe coding concept explained by Andrej Karpathy."
+    },
+    {
+      "title": "Cursor Tutorial: Complete Guide for Beginners",
+      "channel": "Fireship",
+      "url": "https://www.youtube.com/watch?v=example2",
+      "duration": "12:00",
+      "level": "beginner",
+      "topics": ["cursor", "tutorial"],
+      "description": "Fast-paced intro to Cursor IDE features."
+    },
+    {
+      "title": "Claude Code Deep Dive: Agentic Coding",
+      "channel": "Anthropic",
+      "url": "https://www.youtube.com/watch?v=example3",
+      "duration": "25:00",
+      "level": "advanced",
+      "topics": ["claude-code", "agentic"],
+      "description": "Official deep dive into Claude Code capabilities."
+    },
+    {
+      "title": "MCP Explained: Connect AI to Everything",
+      "channel": "Anthropic",
+      "url": "https://www.youtube.com/watch?v=example4",
+      "duration": "18:00",
+      "level": "intermediate",
+      "topics": ["mcp", "integrations"],
+      "description": "Model Context Protocol explained with examples."
+    },
+    {
+      "title": "Kiro: Spec-Driven Development with AWS",
+      "channel": "AWS",
+      "url": "https://www.youtube.com/watch?v=example5",
+      "duration": "30:00",
+      "level": "advanced",
+      "topics": ["kiro", "spec-driven", "aws"],
+      "description": "AWS re:Invent session on Kiro and spec-driven development."
+    },
+    {
+      "title": "Build a Full App with Lovable in 20 Minutes",
+      "channel": "Lovable",
+      "url": "https://www.youtube.com/watch?v=example6",
+      "duration": "20:00",
+      "level": "beginner",
+      "topics": ["lovable", "no-code"],
+      "description": "Complete app build with Lovable, no coding required."
+    },
+    {
+      "title": "v0 Tutorial: AI-Generated UI Components",
+      "channel": "Vercel",
+      "url": "https://www.youtube.com/watch?v=example7",
+      "duration": "10:00",
+      "level": "beginner",
+      "topics": ["v0", "ui"],
+      "description": "Generate React components with natural language."
+    },
+    {
+      "title": "Security Best Practices for AI-Generated Code",
+      "channel": "OWASP",
+      "url": "https://www.youtube.com/watch?v=example8",
+      "duration": "45:00",
+      "level": "intermediate",
+      "topics": ["security", "best-practices"],
+      "description": "Comprehensive security guide for vibe coding."
+    },
+    {
+      "title": "Cline: Open Source Autonomous Coding Agent",
+      "channel": "Cline",
+      "url": "https://www.youtube.com/watch?v=example9",
+      "duration": "22:00",
+      "level": "advanced",
+      "topics": ["cline", "agentic", "open-source"],
+      "description": "Setup and usage of Cline autonomous agent."
+    },
+    {
+      "title": "Supabase + Next.js: Full Stack in 30 Minutes",
+      "channel": "Supabase",
+      "url": "https://www.youtube.com/watch?v=example10",
+      "duration": "30:00",
+      "level": "intermediate",
+      "topics": ["supabase", "nextjs", "full-stack"],
+      "description": "Build a complete app with Supabase and Next.js."
+    }
+  ],
+  "playlists": [
+    {
+      "title": "Vibe Coding Fundamentals",
+      "videos": ["example1", "example2", "example6", "example7"],
+      "level": "beginner",
+      "description": "Start here if you're new to vibe coding."
+    },
+    {
+      "title": "Advanced Agentic Workflows",
+      "videos": ["example3", "example4", "example5", "example9"],
+      "level": "advanced",
+      "description": "Deep dive into autonomous AI coding."
+    },
+    {
+      "title": "Security & Best Practices",
+      "videos": ["example8"],
+      "level": "intermediate",
+      "description": "Keep your vibe-coded projects secure."
+    }
+  ],
+  "topics": {
+    "vibe-coding": "General vibe coding concepts",
+    "cursor": "Cursor IDE",
+    "claude-code": "Claude Code from Anthropic",
+    "kiro": "Kiro IDE from AWS",
+    "mcp": "Model Context Protocol",
+    "agentic": "Autonomous AI coding",
+    "security": "Security best practices",
+    "no-code": "No-code builders",
+    "tutorial": "Step-by-step guides"
+  }
+}

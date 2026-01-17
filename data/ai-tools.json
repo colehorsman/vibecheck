@@ -1,0 +1,173 @@
+{
+  "lastUpdated": "2026-01-17",
+  "tools": [
+    {
+      "name": "Cursor",
+      "category": "IDE",
+      "level": "intermediate",
+      "pricing": {
+        "free": "Limited",
+        "paid": "$20/mo"
+      },
+      "url": "https://cursor.com",
+      "description": "VS Code fork with AI-native features. Best overall AI IDE.",
+      "features": ["Inline suggestions", "Chat", "Composer (multi-file)", "Tab completion"],
+      "bestFor": "Daily development, full-stack projects"
+    },
+    {
+      "name": "GitHub Copilot",
+      "category": "IDE Extension",
+      "level": "intermediate",
+      "pricing": {
+        "free": "Students/OSS",
+        "paid": "$10/mo"
+      },
+      "url": "https://github.com/features/copilot",
+      "description": "Inline code suggestions in any IDE. Best value for money.",
+      "features": ["Inline suggestions", "Chat", "CLI"],
+      "bestFor": "Existing VS Code users, budget-conscious"
+    },
+    {
+      "name": "Claude Code",
+      "category": "Agentic",
+      "level": "advanced",
+      "pricing": {
+        "free": "No",
+        "paid": "Usage-based"
+      },
+      "url": "https://claude.ai/code",
+      "description": "Agentic coding from Anthropic. AI takes actions autonomously.",
+      "features": ["Autonomous coding", "MCP integration", "Multi-file edits", "Terminal access"],
+      "bestFor": "Complex projects, autonomous workflows"
+    },
+    {
+      "name": "Kiro",
+      "category": "IDE",
+      "level": "advanced",
+      "pricing": {
+        "free": "Preview",
+        "paid": "TBD"
+      },
+      "url": "https://kiro.dev",
+      "description": "AWS IDE with spec-driven development. EARS format requirements.",
+      "features": ["Spec-driven", "Steering files", "Hooks", "Multi-agent"],
+      "bestFor": "Enterprise, production systems, documentation"
+    },
+    {
+      "name": "Windsurf",
+      "category": "IDE",
+      "level": "intermediate",
+      "pricing": {
+        "free": "Yes",
+        "paid": "$15/mo"
+      },
+      "url": "https://codeium.com/windsurf",
+      "description": "Free Cursor alternative from Codeium. Cascade for multi-file.",
+      "features": ["Cascade (agentic)", "Inline suggestions", "Chat"],
+      "bestFor": "Budget-conscious, Cursor alternative"
+    },
+    {
+      "name": "Cline",
+      "category": "Agentic",
+      "level": "advanced",
+      "pricing": {
+        "free": "Yes (BYOK)",
+        "paid": "API costs"
+      },
+      "url": "https://github.com/cline/cline",
+      "description": "Open-source autonomous agent. VS Code extension.",
+      "features": ["Autonomous", "MCP support", "Open-source", "Customizable"],
+      "bestFor": "Open-source enthusiasts, customization"
+    },
+    {
+      "name": "Lovable",
+      "category": "No-Code Builder",
+      "level": "beginner",
+      "pricing": {
+        "free": "Limited",
+        "paid": "$20/mo"
+      },
+      "url": "https://lovable.dev",
+      "description": "Describe your app, it builds it. Best for non-coders.",
+      "features": ["Natural language", "Full-stack apps", "Deployment"],
+      "bestFor": "Non-coders, rapid prototyping"
+    },
+    {
+      "name": "v0",
+      "category": "UI Builder",
+      "level": "beginner",
+      "pricing": {
+        "free": "Yes",
+        "paid": "$20/mo"
+      },
+      "url": "https://v0.dev",
+      "description": "Vercel's AI UI generator. Say 'build me a dashboard'.",
+      "features": ["UI generation", "React/Next.js", "shadcn/ui"],
+      "bestFor": "UI components, landing pages"
+    },
+    {
+      "name": "Bolt.new",
+      "category": "No-Code Builder",
+      "level": "beginner",
+      "pricing": {
+        "free": "Limited",
+        "paid": "$20/mo"
+      },
+      "url": "https://bolt.new",
+      "description": "StackBlitz's AI builder. Full apps in browser.",
+      "features": ["Browser-based", "Full-stack", "Instant preview"],
+      "bestFor": "Quick prototypes, no setup"
+    },
+    {
+      "name": "Replit",
+      "category": "IDE",
+      "level": "beginner",
+      "pricing": {
+        "free": "Yes",
+        "paid": "$25/mo"
+      },
+      "url": "https://replit.com",
+      "description": "Browser IDE with AI. Good for learning.",
+      "features": ["Browser-based", "AI assistant", "Deployment"],
+      "bestFor": "Learning, collaboration"
+    },
+    {
+      "name": "Google AntiGravity",
+      "category": "IDE",
+      "level": "intermediate",
+      "pricing": {
+        "free": "Preview",
+        "paid": "TBD"
+      },
+      "url": "https://antigravity.google",
+      "description": "Google's AI IDE. Unlimited free during preview.",
+      "features": ["Gemini integration", "Multi-file", "Free preview"],
+      "bestFor": "$0 stack, Google ecosystem"
+    },
+    {
+      "name": "Devin",
+      "category": "Agentic",
+      "level": "advanced",
+      "pricing": {
+        "free": "No",
+        "paid": "$500/mo"
+      },
+      "url": "https://devin.ai",
+      "description": "Fully autonomous AI engineer. Very expensive.",
+      "features": ["Fully autonomous", "Browser control", "Long-running tasks"],
+      "bestFor": "Enterprise, complex autonomous tasks"
+    }
+  ],
+  "categories": {
+    "IDE": "Full development environment with AI",
+    "IDE Extension": "AI added to existing IDE",
+    "Agentic": "AI takes autonomous actions",
+    "No-Code Builder": "Build without writing code",
+    "UI Builder": "Generate UI components"
+  },
+  "levels": {
+    "beginner": "No coding experience needed",
+    "intermediate": "Some coding knowledge helpful",
+    "advanced": "Comfortable with full-stack development"
+  }
+}

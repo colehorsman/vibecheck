@@ -1,0 +1,126 @@
+# Next.js + Supabase Project
+
+## Tech Stack
+- Framework: Next.js 14 (App Router)
+- Database: Supabase (Postgres)
+- Auth: Supabase Auth
+- Styling: Tailwind CSS
+- Language: TypeScript (strict mode)
+
+## Project Structure
+```
+/app          - Next.js App Router pages
+/components   - React components
+/lib          - Utility functions and Supabase client
+/types        - TypeScript type definitions
+/supabase     - Database types and migrations
+```
+
+## Code Style
+
+### TypeScript
+- Use strict mode
+- Explicit return types on exported functions
+- Use Zod for runtime validation
+- Prefer `interface` over `type` for objects
+
+### React
+- Functional components only
+- Server components by default
+- Client components only when needed (interactivity, hooks)
+- Use `use client` directive explicitly
+
+### Naming
+- Components: PascalCase (UserProfile.tsx)
+- Utilities: camelCase (formatDate.ts)
+- Constants: SCREAMING_SNAKE_CASE
+- Database tables: snake_case
+
+## Supabase Patterns
+
+### Client Setup
+```typescript
+// lib/supabase/client.ts - Browser client
+import { createBrowserClient } from '@supabase/ssr'
+
+export const createClient = () =>
+  createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  )
+```
+
+### Server Setup
+```typescript
+// lib/supabase/server.ts - Server client
+import { createServerClient } from '@supabase/ssr'
+import { cookies } from 'next/headers'
+
+export const createClient = () => {
+  const cookieStore = cookies()
+  return createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll()
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          )
+        },
+      },
+    }
+  )
+}
+```
+
+### Row Level Security
+- Always enable RLS on tables
+- Create policies for each operation (SELECT, INSERT, UPDATE, DELETE)
+- Use auth.uid() for user-specific data
+
+## Security Rules
+
+### Never
+- Hardcode secrets or API keys
+- Use service role key in client code
+- Trust client-side data without validation
+- Expose internal error details
+
+### Always
+- Use environment variables for secrets
+- Validate inputs with Zod
+- Use parameterized queries
+- Enable RLS on all tables
+- Check auth in API routes
+
+## Error Handling
+
+```typescript
+// Good pattern
+try {
+  const { data, error } = await supabase.from('users').select()
+  if (error) throw error
+  return data
+} catch (error) {
+  console.error('Database error:', error)
+  throw new Error('Failed to fetch users')
+}
+```
+
+## File Organization
+
+When creating new features:
+1. Create component in /components
+2. Add types in /types
+3. Add utilities in /lib
+4. Create page in /app
+
+## Testing
+
+- Use Vitest for unit tests
+- Test files next to source: `Component.test.tsx`
+- Mock Supabase client in tests
